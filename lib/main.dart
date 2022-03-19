@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -151,9 +152,9 @@ class _LoginFormState extends State<LoginForm> {
                   actions: <Widget>[
                     TextButton(
                       onPressed: () {
-                        Navigator.of(ctx).pop();
+                        Navigator.of(ctx).pushReplacement(MaterialPageRoute(builder: (ctx)=> const HomePage()));
                       },
-                      child: const Text("okay"),
+                      child: const Text("Start Watching Movies"),
                     ),
                   ],
                 ),
@@ -170,6 +171,7 @@ class _LoginFormState extends State<LoginForm> {
             child: const Text(
               'LOGIN',
               style: TextStyle(fontWeight: FontWeight.bold),
+
             ),
           )
         ],
